@@ -10,71 +10,71 @@ uses
 
 type TUsesPermissionsOTASignature = class(TUsesPermissionsOTABase, IUsesPermissionsSignature)
   private
-    function GetBindAccessibility: Boolean;
-    function GetBindAutofill: Boolean;
-    function GetBindCallScreening: Boolean;
-    function GetBindCarrierMessaging: Boolean;
-    function GetBindCarrierService: Boolean;
-    function GetBindChooserTargetService: Boolean;
-    function GetBindConditionProviderService: Boolean;
-    function GetBindDeviceAdmin: Boolean;
-    function GetBindDreamService: Boolean;
-    function GetBindInCallService: Boolean;
-    function GetBindInputMethod: Boolean;
-    function GetBindMIDIDeviceService: Boolean;
-    function GetBindNFCService: Boolean;
-    function GetBindNotificationListenerService: Boolean;
-    function GetBindPrintService: Boolean;
-    function GetBindQuickSettingsTile: Boolean;
-    function GetBindRemoteviews: Boolean;
-    function GetBindTelecomConnectionService: Boolean;
-    function GetBindTextService: Boolean;
-    function GetBindTVInput: Boolean;
-    function GetBindVisualVoicemailService: Boolean;
-    function GetBindVoiceInteraction: Boolean;
-    function GetBindVPNService: Boolean;
-    function GetBindVRListenerService: Boolean;
-    function GetBindWallpaper: Boolean;
-    function GetClearAppCache: Boolean;
-    function GetManageDocuments: Boolean;
-    function GetReadVoicemail: Boolean;
-    function GetRequestInstallPackages: Boolean;
-    function GetSystemAlertWindow: Boolean;
-    function GetWriteSettings: Boolean;
-    function GetWriteVoicemail: Boolean;
+    function  GetBindAccessibility               : Boolean;
+    function  GetBindAutofill                    : Boolean;
+    function  GetBindCallScreening               : Boolean;
+    function  GetBindCarrierMessaging            : Boolean;
+    function  GetBindCarrierService              : Boolean;
+    function  GetBindChooserTargetService        : Boolean;
+    function  GetBindConditionProviderService    : Boolean;
+    function  GetBindDeviceAdmin                 : Boolean;
+    function  GetBindDreamService                : Boolean;
+    function  GetBindInCallService               : Boolean;
+    function  GetBindInputMethod                 : Boolean;
+    function  GetBindMIDIDeviceService           : Boolean;
+    function  GetBindNFCService                  : Boolean;
+    function  GetBindNotificationListenerService : Boolean;
+    function  GetBindPrintService                : Boolean;
+    function  GetBindQuickSettingsTile           : Boolean;
+    function  GetBindRemoteviews                 : Boolean;
+    function  GetBindTelecomConnectionService    : Boolean;
+    function  GetBindTextService                 : Boolean;
+    function  GetBindTVInput                     : Boolean;
+    function  GetBindVisualVoicemailService      : Boolean;
+    function  GetBindVoiceInteraction            : Boolean;
+    function  GetBindVPNService                  : Boolean;
+    function  GetBindVRListenerService           : Boolean;
+    function  GetBindWallpaper                   : Boolean;
+    function  GetClearAppCache                   : Boolean;
+    function  GetManageDocuments                 : Boolean;
+    function  GetReadVoicemail                   : Boolean;
+    function  GetRequestInstallPackages          : Boolean;
+    function  GetSystemAlertWindow               : Boolean;
+    function  GetWriteSettings                   : Boolean;
+    function  GetWriteVoicemail                  : Boolean;
 
-    procedure SetBindAccessibility(const Value: Boolean);
-    procedure SetBindAutofill(const Value: Boolean);
-    procedure SetBindCallScreening(const Value: Boolean);
-    procedure SetBindCarrierMessaging(const Value: Boolean);
-    procedure SetBindCarrierService(const Value: Boolean);
-    procedure SetBindChooserTargetService(const Value: Boolean);
-    procedure SetBindConditionProviderService(const Value: Boolean);
-    procedure SetBindDeviceAdmin(const Value: Boolean);
-    procedure SetBindDreamService(const Value: Boolean);
-    procedure SetBindInCallService(const Value: Boolean);
-    procedure SetBindInputMethod(const Value: Boolean);
-    procedure SetBindMIDIDeviceService(const Value: Boolean);
-    procedure SetBindNFCService(const Value: Boolean);
-    procedure SetBindNotificationListenerService(const Value: Boolean);
-    procedure SetBindPrintService(const Value: Boolean);
-    procedure SetBindQuickSettingsTile(const Value: Boolean);
-    procedure SetBindRemoteviews(const Value: Boolean);
-    procedure SetBindTelecomConnectionService(const Value: Boolean);
-    procedure SetBindTextService(const Value: Boolean);
-    procedure SetBindTVInput(const Value: Boolean);
-    procedure SetBindVisualVoicemailService(const Value: Boolean);
-    procedure SetBindVoiceInteraction(const Value: Boolean);
-    procedure SetBindVPNService(const Value: Boolean);
-    procedure SetBindVRListenerService(const Value: Boolean);
-    procedure SetBindWallpaper(const Value: Boolean);
-    procedure SetClearAppCache(const Value: Boolean);
-    procedure SetManageDocuments(const Value: Boolean);
-    procedure SetReadVoicemail(const Value: Boolean);
-    procedure SetRequestInstallPackages(const Value: Boolean);
-    procedure SetSystemAlertWindow(const Value: Boolean);
-    procedure SetWriteSettings(const Value: Boolean);
-    procedure SetWriteVoicemail(const Value: Boolean);
+    procedure SetBindAccessibility               (const Value: Boolean);
+    procedure SetBindAutofill                    (const Value: Boolean);
+    procedure SetBindCallScreening               (const Value: Boolean);
+    procedure SetBindCarrierMessaging            (const Value: Boolean);
+    procedure SetBindCarrierService              (const Value: Boolean);
+    procedure SetBindChooserTargetService        (const Value: Boolean);
+    procedure SetBindConditionProviderService    (const Value: Boolean);
+    procedure SetBindDeviceAdmin                 (const Value: Boolean);
+    procedure SetBindDreamService                (const Value: Boolean);
+    procedure SetBindInCallService               (const Value: Boolean);
+    procedure SetBindInputMethod                 (const Value: Boolean);
+    procedure SetBindMIDIDeviceService           (const Value: Boolean);
+    procedure SetBindNFCService                  (const Value: Boolean);
+    procedure SetBindNotificationListenerService (const Value: Boolean);
+    procedure SetBindPrintService                (const Value: Boolean);
+    procedure SetBindQuickSettingsTile           (const Value: Boolean);
+    procedure SetBindRemoteviews                 (const Value: Boolean);
+    procedure SetBindTelecomConnectionService    (const Value: Boolean);
+    procedure SetBindTextService                 (const Value: Boolean);
+    procedure SetBindTVInput                     (const Value: Boolean);
+    procedure SetBindVisualVoicemailService      (const Value: Boolean);
+    procedure SetBindVoiceInteraction            (const Value: Boolean);
+    procedure SetBindVPNService                  (const Value: Boolean);
+    procedure SetBindVRListenerService           (const Value: Boolean);
+    procedure SetBindWallpaper                   (const Value: Boolean);
+    procedure SetClearAppCache                   (const Value: Boolean);
+    procedure SetManageDocuments                 (const Value: Boolean);
+    procedure SetReadVoicemail                   (const Value: Boolean);
+    procedure SetRequestInstallPackages          (const Value: Boolean);
+    procedure SetSystemAlertWindow               (const Value: Boolean);
+    procedure SetWriteSettings                   (const Value: Boolean);
+    procedure SetWriteVoicemail                  (const Value: Boolean);
 
   public
     function Permissions: TArray<string>;
@@ -87,162 +87,162 @@ implementation
 
 function TUsesPermissionsOTASignature.GetBindAccessibility: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_ACCESSIBILITY_SERVICE);
+  result := HasPermission(AUP_BIND_ACCESSIBILITY_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindAutofill: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_AUTOFILL_SERVICE);
+  result := HasPermission(AUP_BIND_AUTOFILL_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindCallScreening: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_SCREENING_SERVICE);
+  result := HasPermission(AUP_BIND_SCREENING_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindCarrierMessaging: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_CARRIER_MESSAGING_SERVICE);
+  result := HasPermission(AUP_BIND_CARRIER_MESSAGING_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindCarrierService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_CARRIER_SERVICES);
+  result := HasPermission(AUP_BIND_CARRIER_SERVICES);
 end;
 
 function TUsesPermissionsOTASignature.GetBindChooserTargetService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_CHOOSER_TARGET_SERVICE);
+  result := HasPermission(AUP_BIND_CHOOSER_TARGET_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindConditionProviderService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_CONDITION_PROVIDER_SERVICE);
+  result := HasPermission(AUP_BIND_CONDITION_PROVIDER_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindDeviceAdmin: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_DEVICE_ADMIN);
+  result := HasPermission(AUP_BIND_DEVICE_ADMIN);
 end;
 
 function TUsesPermissionsOTASignature.GetBindDreamService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_DREAM_SERVICE);
+  result := HasPermission(AUP_BIND_DREAM_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindInCallService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_INCALL_SERVICE);
+  result := HasPermission(AUP_BIND_INCALL_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindInputMethod: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_INPUT_METHOD);
+  result := HasPermission(AUP_BIND_INPUT_METHOD);
 end;
 
 function TUsesPermissionsOTASignature.GetBindMIDIDeviceService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_MIDI_DEVICE_SERVICE);
+  result := HasPermission(AUP_BIND_MIDI_DEVICE_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindNFCService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_NFC_SERVICE);
+  result := HasPermission(AUP_BIND_NFC_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindNotificationListenerService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_NOTIFICATION_LISTENER_SERVICE);
+  result := HasPermission(AUP_BIND_NOTIFICATION_LISTENER_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindPrintService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_PRINT_SERVICE);
+  result := HasPermission(AUP_BIND_PRINT_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindQuickSettingsTile: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_QUICK_SETTINGS_TILE);
+  result := HasPermission(AUP_BIND_QUICK_SETTINGS_TILE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindRemoteviews: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_REMOTEVIEWS);
+  result := HasPermission(AUP_BIND_REMOTEVIEWS);
 end;
 
 function TUsesPermissionsOTASignature.GetBindTelecomConnectionService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_TELECOM_CONNECTION_SERVICE);
+  result := HasPermission(AUP_BIND_TELECOM_CONNECTION_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindTextService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_TEXT_SERVICE);
+  result := HasPermission(AUP_BIND_TEXT_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindTVInput: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_TV_INPUT);
+  result := HasPermission(AUP_BIND_TV_INPUT);
 end;
 
 function TUsesPermissionsOTASignature.GetBindVisualVoicemailService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_VISUAL_VOICEMAIL_SERVICE);
+  result := HasPermission(AUP_BIND_VISUAL_VOICEMAIL_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindVoiceInteraction: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_VOICE_INTERACTION);
+  result := HasPermission(AUP_BIND_VOICE_INTERACTION);
 end;
 
 function TUsesPermissionsOTASignature.GetBindVPNService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_VPN_SERVICE);
+  result := HasPermission(AUP_BIND_VPN_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindVRListenerService: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_VR_LISTENER_SERVICE);
+  result := HasPermission(AUP_BIND_VR_LISTENER_SERVICE);
 end;
 
 function TUsesPermissionsOTASignature.GetBindWallpaper: Boolean;
 begin
-  Result := HasPermission(AUP_BIND_WALLPAPER);
+  result := HasPermission(AUP_BIND_WALLPAPER);
 end;
 
 function TUsesPermissionsOTASignature.GetClearAppCache: Boolean;
 begin
-  Result := HasPermission(AUP_CLEAR_APP_CACHE);
+  result := HasPermission(AUP_CLEAR_APP_CACHE);
 end;
 
 function TUsesPermissionsOTASignature.GetManageDocuments: Boolean;
 begin
-  Result := HasPermission(AUP_MANAGE_DOCUMENTS);
+  result := HasPermission(AUP_MANAGE_DOCUMENTS);
 end;
 
 function TUsesPermissionsOTASignature.GetReadVoicemail: Boolean;
 begin
-  Result := HasPermission(AUP_READ_VOICEMAIL);
+  result := HasPermission(AUP_READ_VOICEMAIL);
 end;
 
 function TUsesPermissionsOTASignature.GetRequestInstallPackages: Boolean;
 begin
-  Result := HasPermission(AUP_REQUEST_INSTALL_PACKAGES);
+  result := HasPermission(AUP_REQUEST_INSTALL_PACKAGES);
 end;
 
 function TUsesPermissionsOTASignature.GetSystemAlertWindow: Boolean;
 begin
-  Result := HasPermission(AUP_SYSTEM_ALERT_WINDOW);
+  result := HasPermission(AUP_SYSTEM_ALERT_WINDOW);
 end;
 
 function TUsesPermissionsOTASignature.GetWriteSettings: Boolean;
 begin
-  Result := HasPermission(AUP_WRITE_SETTINGS);
+  result := HasPermission(AUP_WRITE_SETTINGS);
 end;
 
 function TUsesPermissionsOTASignature.GetWriteVoicemail: Boolean;
 begin
-  Result := HasPermission(AUP_WRITE_VOICEMAIL);
+  result := HasPermission(AUP_WRITE_VOICEMAIL);
 end;
 
 class function TUsesPermissionsOTASignature.New: IUsesPermissionsSignature;
@@ -252,7 +252,7 @@ end;
 
 function TUsesPermissionsOTASignature.Permissions: TArray<string>;
 begin
-  Result := [];
+  result := [];
 end;
 
 procedure TUsesPermissionsOTASignature.SetBindAccessibility(const Value: Boolean);

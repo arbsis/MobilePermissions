@@ -24,18 +24,18 @@ implementation
 
 class function TMobilePermissionsBase.New: IMobilePermissions;
 begin
-  Result := Self.Create;
+  result := Self.Create;
 end;
 
 function TMobilePermissionsBase.OnRequest(Value: TNotifyEvent): IMobilePermissions;
 begin
-  Result := Self;
+  result     := Self;
   FOnRequest := Value;
 end;
 
 function TMobilePermissionsBase.Request(Permissions: TArray<string>): IMobilePermissions;
 begin
-  Result := Self;
+  result := Self;
 end;
 
 end.

@@ -24,13 +24,13 @@ type TOTATargetConfiguration = class
     class procedure SetProperty(Target: IOTABuildConfiguration; Name: String; Value: String); overload;
     class procedure SetProperty(Target: IOTABuildConfiguration; Name: String; Value: Boolean); overload;
 
-    class function AllConfigurations: IOTABuildConfiguration;
-    class function Debug: IOTABuildConfiguration;
-    class function Release: IOTABuildConfiguration;
+    class function AllConfigurations : IOTABuildConfiguration;
+    class function Debug             : IOTABuildConfiguration;
+    class function Release           : IOTABuildConfiguration;
 
-    class function AndroidAll: IOTABuildConfiguration;
-    class function AndroidDebug: IOTABuildConfiguration;
-    class function AndroidRelease: IOTABuildConfiguration;
+    class function AndroidAll     : IOTABuildConfiguration;
+    class function AndroidDebug   : IOTABuildConfiguration;
+    class function AndroidRelease : IOTABuildConfiguration;
 {$ENDIF}
 end;
 
@@ -60,42 +60,42 @@ end;
 
 class function TOTATargetConfiguration.Configuration(Name: String): IOTABuildConfiguration;
 var
-  LProjectOptions: IOTAProjectOptionsConfigurations;
-  I: Integer;
+  projectOptions : IOTAProjectOptionsConfigurations;
+  i              : Integer;
 begin
-  Result := nil;
-  if Supports(Project.ProjectOptions, IOTAProjectOptionsConfigurations, LProjectOptions) then
+  result := nil;
+  if Supports(Project.ProjectOptions, IOTAProjectOptionsConfigurations, projectOptions) then
   begin
-    for I := 0 to Pred(LProjectOptions.ConfigurationCount) do
-      if LProjectOptions.Configurations[I].Name.ToLower.Equals(Name.ToLower) then
-        Exit(LProjectOptions.Configurations[I]);
+    for i := 0 to Pred(projectOptions.ConfigurationCount) do
+      if projectOptions.Configurations[i].Name.ToLower.Equals(Name.ToLower) then
+        Exit(projectOptions.Configurations[i]);
   end;
 end;
 
 class function TOTATargetConfiguration.Debug: IOTABuildConfiguration;
 begin
-  Result := Configuration(OTA_TARGET_DEBUG);
+  result := Configuration(OTA_TARGET_DEBUG);
 end;
 
 class function TOTATargetConfiguration.Project: IOTAProject;
 begin
-  Result := GetActiveProject;
+  result := GetActiveProject;
 end;
 
 class procedure TOTATargetConfiguration.ReadProperty(Target: IOTABuildConfiguration; Name: String; out Value: Boolean);
 var
-  LStrValue: string;
+  strValue: string;
 begin
   Value:= False;
-  ReadProperty(Target, Name, LStrValue);
+  ReadProperty(Target, Name, strValue);
 
-  if not LStrValue.Trim.IsEmpty then
-    Value := StrToBoolDef(LStrValue, False);
+  if not strValue.Trim.IsEmpty then
+    Value := StrToBoolDef(strValue, False);
 end;
 
 class procedure TOTATargetConfiguration.ReadProperty(Target: IOTABuildConfiguration; Name: String; out Value: String);
 begin
-  Value := EmptyStr;
+  Value  := EmptyStr;
 
   if Target.PropertyExists(Name) then
     Value := Target.GetValue(Name);
@@ -103,7 +103,7 @@ end;
 
 class function TOTATargetConfiguration.Release: IOTABuildConfiguration;
 begin
-  Result := Configuration(OTA_TARGET_RELEASE);
+  result := Configuration(OTA_TARGET_RELEASE);
 end;
 
 class procedure TOTATargetConfiguration.SetProperty(Target: IOTABuildConfiguration; Name: String; Value: Boolean);

@@ -8,107 +8,105 @@ uses
 
 type TUsesPermissionsFMXStandard = class(TUsesPermissionsFMXBase, IUsesPermissionsStandard)
   private
-    function GetAccessLocationExtra: Boolean;
-    function GetAccessNetworkState: Boolean;
-    function GetAccessNotificationPolicy: Boolean;
-    function GetAccessWifiState: Boolean;
-    function GetBatteryStats: Boolean;
-    function GetBluetoothAdmin: Boolean;
-    function GetBluetooth: Boolean;
-    function GetBroadcastSticky: Boolean;
-    function GetCallCompanionApp: Boolean;
-    function GetChangeConfiguration: Boolean;
-    function GetChangeNetworkState: Boolean;
-    function GetChangeWifiMulticastState: Boolean;
-    function GetChangeWifiState: Boolean;
-    function GetDisableKeyguard: Boolean;
-    function GetExpandStatusBar: Boolean;
-    function GetFlashligth: Boolean;
-    function GetForegroundService: Boolean;
-    function GetGetPackageSize: Boolean;
-    function GetGetTasks: Boolean;
-    function GetGlobalSearch: Boolean;
-    function GetInstallShortcut: Boolean;
-    function GetInstantAppForegroundService: Boolean;
-    function GetInternet: Boolean;
-    function GetKillBackgroundProcesses: Boolean;
-    function GetManageOwnCalls: Boolean;
-    function GetModifyAudioSettings: Boolean;
-    function GetNFCTransactionEvent: Boolean;
-    function GetNFC: Boolean;
-    function GetPackageUseStats: Boolean;
-    function GetReadGServices: Boolean;
-    function GetReadSyncSettings: Boolean;
-    function GetReadSyncStats: Boolean;
-    function GetReceiveBootCompleted: Boolean;
-    function GetReorderTasks: Boolean;
-    function GetRequestCompanion: Boolean;
-    function GetRequestCompanionUseDataInBackground: Boolean;
-    function GetRequestDeletePackages: Boolean;
-    function GetRequestIgnoreBatteryOptimizations: Boolean;
-    function GetSetAlarm: Boolean;
-    function GetSetWallpaperHints: Boolean;
-    function GetSetWallpaper: Boolean;
-    function GetSubscribedFeedsRead: Boolean;
-    function GetTransmitIR: Boolean;
-    function GetUseBiometric: Boolean;
-    function GetUseFingerprint: Boolean;
-    function GetVendingBilling: Boolean;
-    function GetVibrate: Boolean;
-    function GetWakeLock: Boolean;
-    function GetWriteSyncSettings: Boolean;
-    function GetWriteUserDictionary: Boolean;
+    function  GetAccessLocationExtra                 : Boolean;
+    function  GetAccessNotificationPolicy            : Boolean;
+    function  GetAccessWifiState                     : Boolean;
+    function  GetBatteryStats                        : Boolean;
+    function  GetAccessNetworkState                  : Boolean;
+    function  GetBluetoothAdmin                      : Boolean;
+    function  GetBluetooth                           : Boolean;
+    function  GetBroadcastSticky                     : Boolean;
+    function  GetChangeConfiguration                 : Boolean;
+    function  GetChangeNetworkState                  : Boolean;
+    function  GetChangeWifiMulticastState            : Boolean;
+    function  GetChangeWifiState                     : Boolean;
+    function  GetDisableKeyguard                     : Boolean;
+    function  GetExpandStatusBar                     : Boolean;
+    function  GetFlashligth                          : Boolean;
+    function  GetForegroundService                   : Boolean;
+    function  GetGetPackageSize                      : Boolean;
+    function  GetGetTasks                            : Boolean;
+    function  GetGlobalSearch                        : Boolean;
+    function  GetInstallShortcut                     : Boolean;
+    function  GetInstantAppForegroundService         : Boolean;
+    function  GetInternet                            : Boolean;
+    function  GetKillBackgroundProcesses             : Boolean;
+    function  GetManageOwnCalls                      : Boolean;
+    function  GetModifyAudioSettings                 : Boolean;
+    function  GetNFCTransactionEvent                 : Boolean;
+    function  GetNFC                                 : Boolean;
+    function  GetPackageUseStats                     : Boolean;
+    function  GetReadGServices                       : Boolean;
+    function  GetReadSyncSettings                    : Boolean;
+    function  GetReadSyncStats                       : Boolean;
+    function  GetReceiveBootCompleted                : Boolean;
+    function  GetReorderTasks                        : Boolean;
+    function  GetRequestCompanion                    : Boolean;
+    function  GetRequestCompanionUseDataInBackground : Boolean;
+    function  GetRequestDeletePackages               : Boolean;
+    function  GetRequestIgnoreBatteryOptimizations   : Boolean;
+    function  GetSetAlarm                            : Boolean;
+    function  GetSetWallpaperHints                   : Boolean;
+    function  GetSetWallpaper                        : Boolean;
+    function  GetSubscribedFeedsRead                 : Boolean;
+    function  GetTransmitIR                          : Boolean;
+    function  GetUseBiometric                        : Boolean;
+    function  GetUseFingerprint                      : Boolean;
+    function  GetVendingBilling                      : Boolean;
+    function  GetVibrate                             : Boolean;
+    function  GetWakeLock                            : Boolean;
+    function  GetWriteSyncSettings                   : Boolean;
+    function  GetWriteUserDictionary                 : Boolean;
 
-    procedure SetAccessLocationExtra(const Value: Boolean);
-    procedure SetAccessNetworkState(const Value: Boolean);
-    procedure SetAccessNotificationPolicy(const Value: Boolean);
-    procedure SetAccessWifiState(const Value: Boolean);
-    procedure SetBatteryStats(const Value: Boolean);
-    procedure SetBluetoothAdmin(const Value: Boolean);
-    procedure SetBluetooth(const Value: Boolean);
-    procedure SetBroadcastSticky(const Value: Boolean);
-    procedure SetCallCompanionApp(const Value: Boolean);
-    procedure SetChangeConfiguration(const Value: Boolean);
-    procedure SetChangeNetworkState(const Value: Boolean);
-    procedure SetChangeWifiMulticastState(const Value: Boolean);
-    procedure SetChangeWifiState(const Value: Boolean);
-    procedure SetDisableKeyguard(const Value: Boolean);
-    procedure SetExpandStatusBar(const Value: Boolean);
-    procedure SetFlashligth(const Value: Boolean);
-    procedure SetForegroundService(const Value: Boolean);
-    procedure SetGetPackageSize(const Value: Boolean);
-    procedure SetGetTasks(const Value: Boolean);
-    procedure SetGlobalSearch(const Value: Boolean);
-    procedure SetInstallShortcut(const Value: Boolean);
-    procedure SetInstantAppForegroundService(const Value: Boolean);
-    procedure SetInternet(const Value: Boolean);
-    procedure SetKillBackgroundProcesses(const Value: Boolean);
-    procedure SetManageOwnCalls(const Value: Boolean);
-    procedure SetModifyAudioSettings(const Value: Boolean);
-    procedure SetNFCTransactionEvent(const Value: Boolean);
-    procedure SetNFC(const Value: Boolean);
-    procedure SetPackageUseStats(const Value: Boolean);
-    procedure SetReadGServices(const Value: Boolean);
-    procedure SetReadSyncSettings(const Value: Boolean);
-    procedure SetReadSyncStats(const Value: Boolean);
-    procedure SetReceiveBootCompleted(const Value: Boolean);
-    procedure SetReorderTasks(const Value: Boolean);
-    procedure SetRequestCompanion(const Value: Boolean);
-    procedure SetRequestCompanionUseDataInBackground(const Value: Boolean);
-    procedure SetRequestDeletePackages(const Value: Boolean);
-    procedure SetRequestIgnoreBatteryOptimizations(const Value: Boolean);
-    procedure SetSetAlarm(const Value: Boolean);
-    procedure SetSetWallpaperHints(const Value: Boolean);
-    procedure SetSetWallpaper(const Value: Boolean);
-    procedure SetSubscribedFeedsRead(const Value: Boolean);
-    procedure SetTransmitIR(const Value: Boolean);
-    procedure SetUseBiometric(const Value: Boolean);
-    procedure SetUseFingerprint(const Value: Boolean);
-    procedure SetVendingBilling(const Value: Boolean);
-    procedure SetVibrate(const Value: Boolean);
-    procedure SetWakeLock(const Value: Boolean);
-    procedure SetWriteSyncSettings(const Value: Boolean);
-    procedure SetWriteUserDictionary(const Value: Boolean);
+    procedure SetAccessLocationExtra                 (const Value: Boolean);
+    procedure SetAccessNetworkState                  (const Value: Boolean);
+    procedure SetAccessNotificationPolicy            (const Value: Boolean);
+    procedure SetAccessWifiState                     (const Value: Boolean);
+    procedure SetBatteryStats                        (const Value: Boolean);
+    procedure SetBluetoothAdmin                      (const Value: Boolean);
+    procedure SetBluetooth                           (const Value: Boolean);
+    procedure SetBroadcastSticky                     (const Value: Boolean);
+    procedure SetChangeConfiguration                 (const Value: Boolean);
+    procedure SetChangeNetworkState                  (const Value: Boolean);
+    procedure SetChangeWifiMulticastState            (const Value: Boolean);
+    procedure SetChangeWifiState                     (const Value: Boolean);
+    procedure SetDisableKeyguard                     (const Value: Boolean);
+    procedure SetExpandStatusBar                     (const Value: Boolean);
+    procedure SetFlashligth                          (const Value: Boolean);
+    procedure SetForegroundService                   (const Value: Boolean);
+    procedure SetGetPackageSize                      (const Value: Boolean);
+    procedure SetGetTasks                            (const Value: Boolean);
+    procedure SetGlobalSearch                        (const Value: Boolean);
+    procedure SetInstallShortcut                     (const Value: Boolean);
+    procedure SetInstantAppForegroundService         (const Value: Boolean);
+    procedure SetInternet                            (const Value: Boolean);
+    procedure SetKillBackgroundProcesses             (const Value: Boolean);
+    procedure SetManageOwnCalls                      (const Value: Boolean);
+    procedure SetModifyAudioSettings                 (const Value: Boolean);
+    procedure SetNFCTransactionEvent                 (const Value: Boolean);
+    procedure SetNFC                                 (const Value: Boolean);
+    procedure SetPackageUseStats                     (const Value: Boolean);
+    procedure SetReadGServices                       (const Value: Boolean);
+    procedure SetReadSyncSettings                    (const Value: Boolean);
+    procedure SetReadSyncStats                       (const Value: Boolean);
+    procedure SetReceiveBootCompleted                (const Value: Boolean);
+    procedure SetReorderTasks                        (const Value: Boolean);
+    procedure SetRequestCompanion                    (const Value: Boolean);
+    procedure SetRequestCompanionUseDataInBackground (const Value: Boolean);
+    procedure SetRequestDeletePackages               (const Value: Boolean);
+    procedure SetRequestIgnoreBatteryOptimizations   (const Value: Boolean);
+    procedure SetSetAlarm                            (const Value: Boolean);
+    procedure SetSetWallpaperHints                   (const Value: Boolean);
+    procedure SetSetWallpaper                        (const Value: Boolean);
+    procedure SetSubscribedFeedsRead                 (const Value: Boolean);
+    procedure SetTransmitIR                          (const Value: Boolean);
+    procedure SetUseBiometric                        (const Value: Boolean);
+    procedure SetUseFingerprint                      (const Value: Boolean);
+    procedure SetVendingBilling                      (const Value: Boolean);
+    procedure SetVibrate                             (const Value: Boolean);
+    procedure SetWakeLock                            (const Value: Boolean);
+    procedure SetWriteSyncSettings                   (const Value: Boolean);
+    procedure SetWriteUserDictionary                 (const Value: Boolean);
 
   public
     class function New: IUsesPermissionsStandard;
@@ -120,257 +118,252 @@ implementation
 
 function TUsesPermissionsFMXStandard.GetAccessLocationExtra: Boolean;
 begin
-  Result := HasPermission(JavaClass.ACCESS_LOCATION_EXTRA_COMMANDS);
+  result := HasPermission(JavaClass.ACCESS_LOCATION_EXTRA_COMMANDS);
 end;
 
 function TUsesPermissionsFMXStandard.GetAccessNetworkState: Boolean;
 begin
-  Result := HasPermission(JavaClass.ACCESS_NETWORK_STATE);
+  result := HasPermission(JavaClass.ACCESS_NETWORK_STATE);
 end;
 
 function TUsesPermissionsFMXStandard.GetAccessNotificationPolicy: Boolean;
 begin
-  Result := HasPermission(JavaClass.ACCESS_NOTIFICATION_POLICY);
+  result := HasPermission(JavaClass.ACCESS_NOTIFICATION_POLICY);
 end;
 
 function TUsesPermissionsFMXStandard.GetAccessWifiState: Boolean;
 begin
-  Result := HasPermission(JavaClass.ACCESS_WIFI_STATE);
+  result := HasPermission(JavaClass.ACCESS_WIFI_STATE);
 end;
 
 function TUsesPermissionsFMXStandard.GetBatteryStats: Boolean;
 begin
-  Result := HasPermission(JavaClass.BATTERY_STATS);
+  result := HasPermission(JavaClass.BATTERY_STATS);
 end;
 
 function TUsesPermissionsFMXStandard.GetBluetooth: Boolean;
 begin
-  Result := HasPermission(JavaClass.BLUETOOTH);
+  result := HasPermission(JavaClass.BLUETOOTH);
 end;
 
 function TUsesPermissionsFMXStandard.GetBluetoothAdmin: Boolean;
 begin
-  Result := HasPermission(JavaClass.BLUETOOTH_ADMIN);
+  result := HasPermission(JavaClass.BLUETOOTH_ADMIN);
 end;
 
 function TUsesPermissionsFMXStandard.GetBroadcastSticky: Boolean;
 begin
-  Result := HasPermission(JavaClass.BROADCAST_STICKY);
-end;
-
-function TUsesPermissionsFMXStandard.GetCallCompanionApp: Boolean;
-begin
-  Result := HasPermission(JavaClass.CALL_COMPANION_APP);
+  result := HasPermission(JavaClass.BROADCAST_STICKY);
 end;
 
 function TUsesPermissionsFMXStandard.GetChangeConfiguration: Boolean;
 begin
-  Result := HasPermission(JavaClass.CHANGE_CONFIGURATION);
+  result := HasPermission(JavaClass.CHANGE_CONFIGURATION);
 end;
 
 function TUsesPermissionsFMXStandard.GetChangeNetworkState: Boolean;
 begin
-  Result := HasPermission(JavaClass.CHANGE_NETWORK_STATE);
+  result := HasPermission(JavaClass.CHANGE_NETWORK_STATE);
 end;
 
 function TUsesPermissionsFMXStandard.GetChangeWifiMulticastState: Boolean;
 begin
-  Result := HasPermission(JavaClass.CHANGE_WIFI_MULTICAST_STATE);
+  result := HasPermission(JavaClass.CHANGE_WIFI_MULTICAST_STATE);
 end;
 
 function TUsesPermissionsFMXStandard.GetChangeWifiState: Boolean;
 begin
-  Result := HasPermission(JavaClass.CHANGE_WIFI_STATE);
+  result := HasPermission(JavaClass.CHANGE_WIFI_STATE);
 end;
 
 function TUsesPermissionsFMXStandard.GetDisableKeyguard: Boolean;
 begin
-  Result := HasPermission(JavaClass.DISABLE_KEYGUARD);
+  result := HasPermission(JavaClass.DISABLE_KEYGUARD);
 end;
 
 function TUsesPermissionsFMXStandard.GetExpandStatusBar: Boolean;
 begin
-  Result := HasPermission(JavaClass.EXPAND_STATUS_BAR);
+  result := HasPermission(JavaClass.EXPAND_STATUS_BAR);
 end;
 
 function TUsesPermissionsFMXStandard.GetFlashligth: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetForegroundService: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetGetPackageSize: Boolean;
 begin
-  Result := HasPermission(JavaClass.GET_PACKAGE_SIZE);
+  result := HasPermission(JavaClass.GET_PACKAGE_SIZE);
 end;
 
 function TUsesPermissionsFMXStandard.GetGetTasks: Boolean;
 begin
-  Result := HasPermission(JavaClass.GET_TASKS);
+  result := HasPermission(JavaClass.GET_TASKS);
 end;
 
 function TUsesPermissionsFMXStandard.GetGlobalSearch: Boolean;
 begin
-  Result := HasPermission(JavaClass.GLOBAL_SEARCH);
+  result := HasPermission(JavaClass.GLOBAL_SEARCH);
 end;
 
 function TUsesPermissionsFMXStandard.GetInstantAppForegroundService: Boolean;
 begin
-  Result := HasPermission(JavaClass.INSTANT_APP_FOREGROUND_SERVICE);
+  result := HasPermission(JavaClass.INSTANT_APP_FOREGROUND_SERVICE);
 end;
 
 function TUsesPermissionsFMXStandard.GetInternet: Boolean;
 begin
-  Result := HasPermission(JavaClass.INTERNET);
+  result := HasPermission(JavaClass.INTERNET);
 end;
 
 function TUsesPermissionsFMXStandard.GetKillBackgroundProcesses: Boolean;
 begin
-  Result := HasPermission(JavaClass.KILL_BACKGROUND_PROCESSES);
+  result := HasPermission(JavaClass.KILL_BACKGROUND_PROCESSES);
 end;
 
 function TUsesPermissionsFMXStandard.GetManageOwnCalls: Boolean;
 begin
-  Result := HasPermission(JavaClass.MANAGE_OWN_CALLS);
+  result := HasPermission(JavaClass.MANAGE_OWN_CALLS);
 end;
 
 function TUsesPermissionsFMXStandard.GetModifyAudioSettings: Boolean;
 begin
-  Result := HasPermission(JavaClass.MODIFY_AUDIO_SETTINGS);
+  result := HasPermission(JavaClass.MODIFY_AUDIO_SETTINGS);
 end;
 
 function TUsesPermissionsFMXStandard.GetNFC: Boolean;
 begin
-  Result := HasPermission(JavaClass.NFC);
+  result := HasPermission(JavaClass.NFC);
 end;
 
 function TUsesPermissionsFMXStandard.GetNFCTransactionEvent: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetPackageUseStats: Boolean;
 begin
-  Result := HasPermission(JavaClass.PACKAGE_USAGE_STATS);
+  result := HasPermission(JavaClass.PACKAGE_USAGE_STATS);
 end;
 
 function TUsesPermissionsFMXStandard.GetReadGServices: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetReadSyncSettings: Boolean;
 begin
-  Result := HasPermission(JavaClass.READ_SYNC_SETTINGS);
+  result := HasPermission(JavaClass.READ_SYNC_SETTINGS);
 end;
 
 function TUsesPermissionsFMXStandard.GetReadSyncStats: Boolean;
 begin
-  Result := HasPermission(JavaClass.READ_SYNC_STATS);
+  result := HasPermission(JavaClass.READ_SYNC_STATS);
 end;
 
 function TUsesPermissionsFMXStandard.GetReceiveBootCompleted: Boolean;
 begin
-  Result := HasPermission(JavaClass.RECEIVE_BOOT_COMPLETED);
+  result := HasPermission(JavaClass.RECEIVE_BOOT_COMPLETED);
 end;
 
 function TUsesPermissionsFMXStandard.GetReorderTasks: Boolean;
 begin
-  Result := HasPermission(JavaClass.REORDER_TASKS);
+  result := HasPermission(JavaClass.REORDER_TASKS);
 end;
 
 function TUsesPermissionsFMXStandard.GetRequestCompanion: Boolean;
 begin
-  Result := HasPermission(JavaClass.REQUEST_COMPANION_RUN_IN_BACKGROUND);
+  result := HasPermission(JavaClass.REQUEST_COMPANION_RUN_IN_BACKGROUND);
 end;
 
 function TUsesPermissionsFMXStandard.GetRequestCompanionUseDataInBackground: Boolean;
 begin
-  Result := HasPermission(JavaClass.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND);
+  result := HasPermission(JavaClass.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND);
 end;
 
 function TUsesPermissionsFMXStandard.GetRequestDeletePackages: Boolean;
 begin
-  Result := HasPermission(JavaClass.REQUEST_DELETE_PACKAGES);
+  result := HasPermission(JavaClass.REQUEST_DELETE_PACKAGES);
 end;
 
 function TUsesPermissionsFMXStandard.GetRequestIgnoreBatteryOptimizations: Boolean;
 begin
-  Result := HasPermission(JavaClass.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+  result := HasPermission(JavaClass.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
 end;
 
 function TUsesPermissionsFMXStandard.GetSetAlarm: Boolean;
 begin
-  Result := HasPermission(JavaClass.SET_ALARM);
+  result := HasPermission(JavaClass.SET_ALARM);
 end;
 
 function TUsesPermissionsFMXStandard.GetSetWallpaper: Boolean;
 begin
-  Result := HasPermission(JavaClass.SET_WALLPAPER);
+  result := HasPermission(JavaClass.SET_WALLPAPER);
 end;
 
 function TUsesPermissionsFMXStandard.GetSetWallpaperHints: Boolean;
 begin
-  Result := HasPermission(JavaClass.SET_WALLPAPER_HINTS);
+  result := HasPermission(JavaClass.SET_WALLPAPER_HINTS);
 end;
 
 function TUsesPermissionsFMXStandard.GetSubscribedFeedsRead: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetTransmitIR: Boolean;
 begin
-  Result := HasPermission(JavaClass.TRANSMIT_IR);
+  result := HasPermission(JavaClass.TRANSMIT_IR);
 end;
 
 function TUsesPermissionsFMXStandard.GetUseBiometric: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetUseFingerprint: Boolean;
 begin
-  Result := HasPermission(JavaClass.USE_FINGERPRINT);
+  result := HasPermission(JavaClass.USE_FINGERPRINT);
 end;
 
 function TUsesPermissionsFMXStandard.GetWriteUserDictionary: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetVendingBilling: Boolean;
 begin
-  Result := True;
+  result := True;
 end;
 
 function TUsesPermissionsFMXStandard.GetVibrate: Boolean;
 begin
-  Result := HasPermission(JavaClass.VIBRATE);
+  result := HasPermission(JavaClass.VIBRATE);
 end;
 
 function TUsesPermissionsFMXStandard.GetWakeLock: Boolean;
 begin
-  Result := HasPermission(JavaClass.WAKE_LOCK);
+  result := HasPermission(JavaClass.WAKE_LOCK);
 end;
 
 function TUsesPermissionsFMXStandard.GetWriteSyncSettings: Boolean;
 begin
-  Result := HasPermission(JavaClass.WRITE_SYNC_SETTINGS);
+  result := HasPermission(JavaClass.WRITE_SYNC_SETTINGS);
 end;
 
 function TUsesPermissionsFMXStandard.GetInstallShortcut: Boolean;
 begin
-  Result := HasPermission(JavaClass.INSTALL_SHORTCUT);
+  result := HasPermission(JavaClass.INSTALL_SHORTCUT);
 end;
 
 class function TUsesPermissionsFMXStandard.New: IUsesPermissionsStandard;
 begin
-  Result := Self.Create;
+  result := Self.Create;
 end;
 
 procedure TUsesPermissionsFMXStandard.SetAccessLocationExtra(const Value: Boolean);
@@ -411,11 +404,6 @@ end;
 procedure TUsesPermissionsFMXStandard.SetBroadcastSticky(const Value: Boolean);
 begin
   AddPermission(JavaClass.BROADCAST_STICKY, Value);
-end;
-
-procedure TUsesPermissionsFMXStandard.SetCallCompanionApp(const Value: Boolean);
-begin
-  AddPermission(JavaClass.CALL_COMPANION_APP, Value);
 end;
 
 procedure TUsesPermissionsFMXStandard.SetChangeConfiguration(const Value: Boolean);

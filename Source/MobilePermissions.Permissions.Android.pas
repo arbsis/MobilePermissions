@@ -3,18 +3,20 @@ unit MobilePermissions.Permissions.Android;
 interface
 
 uses
-  {$IF CompilerVersion >= 33.0}
-    System.Permissions,
-  {$ENDIF}
-  {$IF CompilerVersion >= 35.0}
-    System.Types,
-  {$ENDIF}
-  {$IFDEF ANDROID}
-    Androidapi.Helpers,
-    Androidapi.JNI.Os,
-    Androidapi.JNI.JavaTypes,
-    FMX.Dialogs,
-  {$ENDIF}
+{$IF CompilerVersion >= 33.0}
+  // Delphi 10.3 Rio
+  System.Permissions,
+{$ENDIF}
+{$IF CompilerVersion >= 35.0}
+  // Delphi 11 Alexandria
+  System.Types,
+{$ENDIF}
+{$IFDEF ANDROID}
+  Androidapi.Helpers,
+  Androidapi.JNI.Os,
+  Androidapi.JNI.JavaTypes,
+  FMX.Dialogs,
+{$ENDIF}
   System.Character,
   System.Classes,
   System.SysUtils,
@@ -23,25 +25,26 @@ uses
   MobilePermissions.Permissions.Interfaces;
 
 type
-  {$IF CompilerVersion >= 35.0}
-  TPermissions = System.Types.TClassicStringDynArray;
-  TPermissionsStatus = System.Permissions.TClassicPermissionStatusDynArray;
-  {$ELSE}
-  TPermissions = System.TArray<string>;
-  TPermissionsStatus = System.TArray<TPermissionStatus>;
-  {$ENDIF}
-
   TMobilePermissionsAndroid = class(TMobilePermissionsBase, IMobilePermissions)
   private
     FAndroidVersion: Integer;
 
     procedure SetAndroidVersion;
-    procedure RequestPermissionsResultProc(const APermissions: TPermissions; const AGrantResults: TPermissionsStatus);
 
+{$IF CompilerVersion >= 35.0}
+    // after Delphi 11 Alexandria
+    procedure RequestPermissionsResultProc(const APermissions
+      : TClassicStringDynArray;
+      const AGrantResults: TClassicPermissionStatusDynArray);
+{$ELSE}
+    // before Delphi 11 Alexandria
+    procedure RequestPermissionsResultProc(const APermissions: TArray<string>;
+      const AGrantResults: TArray<TPermissionStatus>);
+{$ENDIF}
   public
     function Request(Permissions: TArray<string>): IMobilePermissions; override;
 
-    constructor Create;
+    constructor create;
     destructor Destroy; override;
   end;
 
@@ -49,7 +52,7 @@ implementation
 
 { TMobilePermissionsAndroid }
 
-constructor TMobilePermissionsAndroid.Create;
+constructor TMobilePermissionsAndroid.create;
 begin
   FAndroidVersion := 0;
 end;
@@ -62,39 +65,49 @@ end;
 procedure TMobilePermissionsAndroid.SetAndroidVersion;
 {$IFDEF ANDROID}
 var
-  LVersionOSStr: String;
-  LMajorVersion: string;
+  VersionOSStr: String;
+  MajorVersion: string;
   I: Integer;
 {$ENDIF}
 begin
   if FAndroidVersion = 0 then
   begin
-    {$IFDEF ANDROID}
-    LVersionOSStr := JStringToString(TJBuild_VERSION.JavaClass.RELEASE);
+{$IFDEF ANDROID}
+    VersionOSStr := JStringToString(TJBuild_VERSION.JavaClass.RELEASE);
 
-    for I := 1 to LVersionOSStr.Length do
+    for I := 1 to VersionOSStr.Length do
     begin
-      if Copy(LVersionOSStr, I, 1) = '.' then
+      if Copy(VersionOSStr, I, 1) = '.' then
         break;
 
-      LMajorVersion := LMajorVersion + Copy(LVersionOSStr, I, 1);
+      MajorVersion := MajorVersion + Copy(VersionOSStr, I, 1);
     end;
-    FAndroidVersion := StrToInt(LMajorVersion);
-    {$ENDIF}
+    FAndroidVersion := StrToInt(MajorVersion);
+{$ENDIF}
   end;
 end;
 
-function TMobilePermissionsAndroid.Request(Permissions: TArray<string>): IMobilePermissions;
+function TMobilePermissionsAndroid.Request(Permissions: TArray<string>)
+  : IMobilePermissions;
 begin
-  Result := Self;
+  result := Self;
   SetAndroidVersion;
-  {$IF CompilerVersion >= 33.0}
+{$IF CompilerVersion >= 33.0}
   if (FAndroidVersion > 6) then
-    PermissionsService.RequestPermissions(Permissions, RequestPermissionsResultProc, nil);
-  {$ENDIF}
+    PermissionsService.RequestPermissions(Permissions,
+      RequestPermissionsResultProc, nil);
+{$ENDIF}
 end;
 
-procedure TMobilePermissionsAndroid.RequestPermissionsResultProc(const APermissions: TPermissions; const AGrantResults: TPermissionsStatus);
+{$IF CompilerVersion >= 35.0}
+procedure TMobilePermissionsAndroid.RequestPermissionsResultProc
+  (const APermissions: TClassicStringDynArray;
+  const AGrantResults: TClassicPermissionStatusDynArray);
+{$ELSE}
+procedure TMobilePermissionsAndroid.RequestPermissionsResultProc(
+  const APermissions: TArray<string>;
+  const AGrantResults: TArray<TPermissionStatus>);
+{$ENDIF}
 begin
   if Assigned(FOnRequest) then
     FOnRequest(nil);
