@@ -186,12 +186,6 @@
         </DelphiCompile>
         <DCCReference Include="designide.dcp"/>
         <DCCReference Include="fmx.dcp"/>
-        <DCCReference Include="..\Component\MobilePermissions.Component.pas"/>
-        <DCCReference Include="..\Component\MobilePermissions.Component.Register.pas"/>
-        <DCCReference Include="..\Component\MobilePermissions.Component.Editor.pas"/>
-        <DCCReference Include="..\Component\MobilePermissions.Component.Editor.Help.pas">
-            <Form>frmMobilePermissionsHelp</Form>
-        </DCCReference>
         <DCCReference Include="..\Source\MobilePermissions.Model.Signature.pas"/>
         <DCCReference Include="..\Source\MobilePermissions.Model.Standard.pas"/>
         <DCCReference Include="..\Source\MobilePermissions.Model.Dangerous.pas"/>
@@ -214,6 +208,13 @@
         <DCCReference Include="..\Source\MobilePermissions.Permissions.Android.pas"/>
         <DCCReference Include="..\Source\MobilePermissions.Permissions.Base.pas"/>
         <DCCReference Include="..\Source\MobilePermissions.Permissions.Factory.pas"/>
+        <DCCReference Include="..\Source\Component\MobilePermissions.Component.Editor.Help.pas">
+            <Form>frmMobilePermissionsHelp</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Source\Component\MobilePermissions.Component.Editor.pas"/>
+        <DCCReference Include="..\Source\Component\MobilePermissions.Component.pas"/>
+        <DCCReference Include="..\Source\Component\MobilePermissions.Component.Register.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -269,13 +270,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="c:\program files (x86)\embarcadero\studio\20.0\lib\Win32\Debug\MobilePermissions.bpl" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="c:\program files (x86)\embarcadero\studio\20.0\lib\Win32\Release\MobilePermissions.bpl" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>MobilePermissions.bpl</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="c:\program files (x86)\embarcadero\studio\20.0\lib\Win32\Release\MobilePermissions.bpl" Configuration="Release" Class="ProjectOutput">
+                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\MobilePermissions.bpl" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>MobilePermissions.bpl</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -1331,5 +1332,5 @@
     </ProjectExtensions>
     <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
     <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
-    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>   
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
 </Project>
