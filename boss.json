@@ -1,0 +1,9 @@
+{
+	"name": "MobilePermissions",
+	"description": "",
+	"version": "0.0.1",
+	"homepage": "https://github.com/arbsis/MobilePermissions",
+	"mainsrc": "./Source",
+	"projects": ["./Package/MobilePermissions.dproj"],
+	"dependencies": {}
+}
